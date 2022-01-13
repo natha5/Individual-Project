@@ -1,0 +1,71 @@
+
+Questions about:
+
+-past use of chatbots
+-what you consider when choosing a film
+-what messaging platforms do you use
+-negative experiences using chatbot - e.g. too slow, clearly a robot, not answering questions
+
+
+
+
+Question 1.
+
+What have you used a chatbot for before?
+
+-Customer assitance
+-answering FAQs
+-Recommendations
+-Not used
+
+
+Question 2.
+
+What messaging platforms do you use?
+-multiple choice of most common options
+-box to add your own
+
+Question 3.
+
+Postivies of chatbot
+-QUick
+-Easily answered question
+-Generated a good recommendation
+-box to add own
+
+Question 4.
+
+Negatives of chatbot
+-Slow
+-Clearly a robot
+-Didnt give correct answer
+-misiniterpeted user prompt
+-bad recommendation
+-box to add own
+
+
+Question 5.
+Where do you look for film recommendation?
+-Reviews
+-Algorithm recommend e.g. netflix
+-imdb type site
+-box to add own
+
+Question 6.
+
+What factors influence you watching a film? tick all that apply
+-actors
+-Poster
+-Reviews/word of mouth
+-age of film
+-age rating
+-genre that you like
+-box to add own
+
+
+Question 7.
+Scale on 1-5 least to most how likely to message a bot to suggest a film
+
+Question 8.
+
+What would increase your likelihood to use a bot to suggest?

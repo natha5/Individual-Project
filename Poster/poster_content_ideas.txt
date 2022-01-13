@@ -1,0 +1,5 @@
+-graphs from survey
+-what software/tools im using - gitpod, github, trello
+-results from research
+-ui mockup
+-sprint planning
