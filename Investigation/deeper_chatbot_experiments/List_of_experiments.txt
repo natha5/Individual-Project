@@ -1,7 +1,0 @@
-Price: found through looking on website
-Range of platforms: ""
-Response time: Set up the bots and give them all the same prompt and see how long it takes. Will repeat and use mutlitple prompts to get
-		a good idea
-Languages used: Look on website. range isn't the most important - does it use a language that I can?
-Extendibility:
-Areas of use: by building bots, I will get an idea of what they are best suited to eg some are better for marketing that recommendation
