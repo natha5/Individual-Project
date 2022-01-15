@@ -1,0 +1,6 @@
+1. Time to respond - echo -bot replies user input
+2. Time to respoind -regex -user enters longer sentence, bot gives different response.
+3. number of platforms - look on website to see where I can deploy to
+4. languages used - ""
+5. cost - better if it can be free for what I need it for
+6. extendibility - how easy to add other functions e.g. webscraper
