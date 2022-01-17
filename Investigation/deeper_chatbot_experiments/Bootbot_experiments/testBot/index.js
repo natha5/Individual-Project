@@ -17,4 +17,9 @@ bot.on('message', (payload, chat) => {
   chat.say(`Echo: ${text}`);
 });
 
+
+bot.hear(['hi', 'hello', 'hey'], (payload, chat) => {
+  chat.say('hello there');
+  });
+
 bot.start(config.get('botPort'));
