@@ -29,7 +29,7 @@ bot.hear('random', (payload,chat) => {
                         }]);
 
                 });
-})
+});
 
 bot.on('message', (payload, chat) => {
   const text = payload.message.text;
@@ -127,8 +127,7 @@ chat.say('That is not a genre.');
 
 
 
-	});
-	};
+	
   const askLength = (convo) => {
 		convo.ask(`How long do you want the film to be at most (in minutes)?`, (payload, convo) => {
 			const text = payload.message.text;
