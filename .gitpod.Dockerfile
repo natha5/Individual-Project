@@ -16,3 +16,5 @@ RUN sudo apt-get install -y \
     libxtst6 \
     xauth \
     xvfb
+
+## Taken from https://medium.com/@angielohqh/cypress-setup-on-gitpod-io-583b0427c730
