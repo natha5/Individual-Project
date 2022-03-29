@@ -1,3 +1,4 @@
+
 FROM gitpod/workspace-full-vnc
 
 ENV CYPRESS_CACHE_FOLDER=/workspace/.cypress-cache
@@ -16,3 +17,5 @@ RUN sudo apt-get update \
    xauth \
    xvfb \
  && sudo rm -rf /var/lib/apt/lists/*
+
+## Taken from https://github.com/mikenikles/cypress-on-gitpod
