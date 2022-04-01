@@ -38,13 +38,13 @@ bot.on('message', (payload, chat) => {
 
 
 
-/* bot.hear('message', (payload, chat) => {
+ bot.hear('message', (payload, chat) => {
 
 	const askGenre = (convo) => {
 		convo.ask(`What film genre would you like to watch?`, (payload, convo) => {
 			const text = payload.message.text;
 			convo.set('genre', text);
-			convo.say(`Ok, the genre will be ${text}`).then(() => askFavoriteFood(convo)); */
+			convo.say(`Ok, the genre will be ${text}`).then(() => askFavoriteFood(convo));
 
       
       //switch statement to match the genre stated to the genre ID
@@ -128,7 +128,7 @@ chat.say('That is not a genre.');
 
 
 	
-  const askLength = (convo) => {
+  /*const askLength = (convo) => {
 		convo.ask(`How long do you want the film to be at most (in minutes)?`, (payload, convo) => {
 			const text = payload.message.text;
 			convo.set('length', text);
@@ -136,5 +136,5 @@ chat.say('That is not a genre.');
 		});
 	};
 
-});
+});*/
 bot.start(config.get('botPort'));
