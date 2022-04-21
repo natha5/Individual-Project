@@ -29,7 +29,7 @@ bot.hear(['random', 'Random'], (payload,chat) => {
         if(genreID!=undefined){
 
                 //make the API request and store the response.
-                fetch(movieRecommendation+id)
+                fetch(movieRecommendation+genreID)
                 .then(res => res.json())
                 .then(json =>{
             
@@ -135,8 +135,11 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
 
                         });
                 };
-                const summary = (convo) = > {
+                const summary = (convo) => {
                         convo.say(`Searching for film`, {typing : true})
+                        
+
+                        
                         convo.end();
                 };
                 
