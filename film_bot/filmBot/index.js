@@ -37,7 +37,7 @@ bot.hear(['random', 'Random'], (payload,chat) => {
         //sends the movie title, overview and image in a facebook messenger generic template
             chat.sendGenericTemplate([{
                     title: json.results[0].original_title,
-                    subtitle: json.results[0].overview,
+                    subtitle: json.results[0].runtime,
                     image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path      
             }]);
         })
@@ -122,7 +122,7 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
                 convo.ask(`What is the maximum length of film?`, (payload, convo) => {
                     const text = payload.message.text;
                     convo.set('length', text);
-                    convo.say(`Ok, the genre will be ${text}`).then(() => askActor(convo));
+                    convo.say(`Ok, the length will be ${text}`).then(() => askActor(convo));
                 });
             };
             const askActor = (convo) => {
@@ -133,7 +133,12 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
                 });
             };
             const summary = (convo) => {
-                convo.say(`Searching for film`, {typing : true})                                               
+                convo.say(`Searching for film`, {typing : true})
+                setTimeout(() => { convo.sendGenericTemplate([{     //makes the ssytem wait 2 seconds before sending message
+                    title: json.results[0].original_title,
+                    subtitle: json.results[0].runtime,
+                    image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path
+                }]); }, 2000);
                 convo.end();
             };
     } 
