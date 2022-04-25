@@ -55,7 +55,7 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
 
     //Stringify the users response
     const query =  String(data.match[1]);
-       
+
     //convert the response to lowercase to prevent request errors
     const res = query.toLowerCase();         
 
@@ -121,13 +121,14 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
         default:
             chat.say('Invalid genre.');
     }
-         
+
     //Conditional to check if the genre matched any existing genre ID
     if(genreID!=undefined){      
         const askLength = (convo) => {
                 convo.ask(`What is the maximum length of film?`, 
                 quickReplies: ['60', '90', '120'], (payload, convo) => {
                     const text = payload.message.text;
+                    length = payload.message.text;
                     convo.set('length', text);
                     convo.say(`Ok, the length will be ${text}`).then(() => askActor(convo));
                 });
@@ -141,13 +142,20 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
             };
             const summary = (convo) => {
                 convo.say(`Searching for film`, {typing : true})
-                setTimeout(() => { convo.sendGenericTemplate([{     //makes the sytem wait 2 seconds before sending message
-                    title: json.results[0].original_title,
-                    subtitle: json.results[0].runtime,
-                    image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path
-                }]); }, 2000);
-                convo.end();
-            };
+
+                //make the API request and store the response.
+                fetch(movieRecommendation+genreID+length)
+                .then(res => res.json())
+                .then(json =>{
+
+                    setTimeout(() => { convo.sendGenericTemplate([{     //makes the sytem wait 2 seconds before sending message
+                        title: json.results[0].original_title,
+                        subtitle: json.results[0].runtime,
+                        image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path
+                    }]); }, 2000);
+                    convo.end();
+            });
+        }
     } 
 });
 
