@@ -21,10 +21,13 @@ let actor;
 
 bot.on('message', (payload, chat) => {
 	const text = payload.message.text;
+    console.log(`Movie data is taken from https://www.themoviedb.org/`)
 	console.log(`Welcome, type genre and then the genre you would like to watch to begin`);
     console.log(`Alternatively, type "random" to get a random recommendation`, {typing:true})
 });
 
+
+//Random movie function
 bot.hear(['random', 'Random'], (payload,chat) => {
     genreID = Math.floor(Math.random() * 1000) + Math.floor(Math.random() * 10) + Math.random();
     if(genreID!=undefined){
@@ -44,7 +47,10 @@ bot.hear(['random', 'Random'], (payload,chat) => {
     }
 });
 
-//Reg expression that listens for the genre
+
+//Main conversation/process 
+
+//Reg expression that listens for the genre. First section adapted from Eric(2017) - https://chatbotslife.com/building-a-messenger-movie-recommendations-chatbot-in-20-minutes-or-less-d0f06ad06d4b
 bot.hear(/genre (.*)/i, (payload, chat, data) => {
 
     //Stringify the users response
