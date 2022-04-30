@@ -41,13 +41,13 @@ bot.hear(['random', 'Random'], (payload,chat) => {
             chat.sendGenericTemplate([{
                     title: json.results[0].original_title,
                     subtitle: json.results[0].runtime,
-                    image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path      
+                    image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path
             }]);
         })
     }
 });
 
-
+S
 //Main conversation/process 
 
 //Reg expression that listens for the genre. First section adapted from Eric(2017) - https://chatbotslife.com/building-a-messenger-movie-recommendations-chatbot-in-20-minutes-or-less-d0f06ad06d4b
@@ -153,7 +153,7 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
                         subtitle: json.results[0].runtime,
                         image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path
                     }]); }, 2000);
-                    convo.end();
+                    convo.end();S
             });
         }
     } 
