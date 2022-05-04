@@ -75,4 +75,42 @@ describe('gnere validation tests' () => {
 	}
 	
 describe('length tests' () => {
-	it
+	it('wrong data type', () => {
+		cy.contains('Aa'.click().type('hello').type({enter})
+		cy.contains('Aa'.click().type('genre music').type({enter})
+		cy.contains('Aa'.click().type('word').type({enter})
+		
+	}
+	it('minimum value', () => {
+		cy.contains('Aa'.click().type('hello').type({enter})
+		cy.contains('Aa'.click().type('genre music').type({enter})
+		cy.contains('Aa'.click().type('1').type({enter})
+		
+	}
+	it('below minimum value', () => {
+		cy.contains('Aa'.click().type('hello').type({enter})
+		cy.contains('Aa'.click().type('genre music').type({enter})
+		cy.contains('Aa'.click().type('0').type({enter})
+		
+	}
+	it('nominal value', () => {
+		cy.contains('Aa'.click().type('hello').type({enter})
+		cy.contains('Aa'.click().type('genre music').type({enter})
+		cy.contains('Aa'.click().type('120').type({enter})
+		
+	}
+	
+describe('tests for actor' () => {
+	it('all data valid', () => {
+		cy.contains('Aa'.click().type('hello').type({enter})
+		cy.contains('Aa'.click().type('genre war').type({enter})
+		cy.contains('Aa'.click().type('110').type({enter})
+		cy.contains('Aa'.click().type('Tom Hardy').type({enter})
+		
+	}
+	it('invalid value', () => {
+		cy.contains('Aa'.click().type('hello').type({enter})
+		cy.contains('Aa'.click().type('genre music').type({enter})
+		cy.contains('Aa'.click().type('word').type({enter})
+		cy.contains('Aa'.click().type('789g43').type({enter})
+	}
