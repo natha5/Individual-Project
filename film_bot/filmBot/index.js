@@ -119,7 +119,7 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
             genreID = 37;
             break;
         default:
-            chat.say('Invalid genre.');
+            chat.say('Invalid genre. Remember to state : genre {name of genre}');
     }
 
     //Conditional to check if the genre matched any existing genre ID
@@ -129,6 +129,19 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
                 quickReplies: ['60', '90', '120'], (payload, convo) => {
                     const text = payload.message.text;
                     length = payload.message.text;
+					
+					try{
+						
+						lengthAsInt = length.toInt();
+					}catch(err) {
+						convo.say(`Invalid length`)
+					}
+					
+					if(lengthAsInt <= 0){
+						convo.say(`Invalid length`)
+					}
+					
+					
                     convo.set('length', text);
                     convo.say(`Ok, the length will be ${text}`).then(() => askActor(convo));
                 });
