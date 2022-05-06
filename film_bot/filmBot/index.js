@@ -47,7 +47,7 @@ bot.hear(['random', 'Random'], (payload,chat) => {
     }
 });
 
-S
+
 //Main conversation/process 
 
 //Reg expression that listens for the genre. First section adapted from Eric(2017) - https://chatbotslife.com/building-a-messenger-movie-recommendations-chatbot-in-20-minutes-or-less-d0f06ad06d4b
@@ -126,7 +126,8 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
     if(genreID!=undefined){      
         const askLength = (convo) => {
                 convo.ask(`What is the maximum length of film?`, 
-                quickReplies: ['60', '90', '120'], (payload, convo) => {
+                //quickReplies: ['60', '90', '120'],
+                 (payload, convo) => {
                     const text = payload.message.text;
                     length = payload.message.text;
 					
@@ -166,7 +167,7 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
                         subtitle: json.results[0].runtime,
                         image_url:'http://image.tmdb.org/t/p/w500'+json.results[0].poster_path
                     }]); }, 2000);
-                    convo.end();S
+                    convo.end();
             });
         }
     } 
