@@ -173,4 +173,4 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
     } 
 });
 
-bot.start(config.get('botPort'));
+bot.start();
