@@ -1,7 +1,7 @@
 {
   "accessToken": "EABuApeDpx84BABe1s8VFXR16OYntbiqm6ga4mPORDIJZA1BhRDh8ovg5jSoFLIE2OWq2p2p9Fs5QSpTiuCdMPHtSwuV1rXZArUt7gOu23Af8iasYJZCjCqCX8asD8EXwHm7jz4ltI8ZAWK8g89KidTRxEz6cxVu35NHRXVBrBWrMnZAyXFlu5LOSvqXrQUbwrHqRZA9SGfpQZDZD",
-  "verifyToken": "",
+  "verifyToken": "filmBotVerify",
   "appSecret": "2b9dbc5cd584e27358f39a002f11f56c",
   "botPort": 3000,
-  "botTunnelSubDomain": "bootbotfilmbot61dx6pp6"
+  "botTunnelSubDomain": "ip40filmbot"
 }
