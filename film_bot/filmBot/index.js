@@ -127,7 +127,7 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
         const askLength = (convo) => {
                 convo.ask(`What is the maximum length of film?`, 
                 //quickReplies: ['60', '90', '120'],
-                 (payload, convo) => {
+                (payload, convo) => {
                     const text = payload.message.text;
                     length = payload.message.text;
 					
@@ -144,16 +144,16 @@ bot.hear(/genre (.*)/i, (payload, chat, data) => {
 					
 					
                     convo.set('length', text);
-                    convo.say(`Ok, the length will be ${text}`).then(() => askActor(convo));
+                    convo.say(`Ok, the length will be ${text}`).then(() => summary(convo));
                 });
             };
-            const askActor = (convo) => {
+            /*const askActor = (convo) => {
                 convo.ask(`What is the name of an actor/actress you enjoy watching?`,  (payload, convo) => {
                     const text = payload.message.text;
                     convo.set('actor', text);
                     convo.say(`Ok, I will look for films starring ${text}`).then(() => summary(convo));
                 });
-            };
+            };*/
             const summary = (convo) => {
                 convo.say(`Searching for film`, {typing : true})
 
