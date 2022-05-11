@@ -1,7 +1,6 @@
 {
-  "accessToken": "EABuApeDpx84BABe1s8VFXR16OYntbiqm6ga4mPORDIJZA1BhRDh8ovg5jSoFLIE2OWq2p2p9Fs5QSpTiuCdMPHtSwuV1rXZArUt7gOu23Af8iasYJZCjCqCX8asD8EXwHm7jz4ltI8ZAWK8g89KidTRxEz6cxVu35NHRXVBrBWrMnZAyXFlu5LOSvqXrQUbwrHqRZA9SGfpQZDZD",
-  "verifyToken": "filmBotVerify",
-  "appSecret": "2b9dbc5cd584e27358f39a002f11f56c",
-  "botPort": 3000,
-  "botTunnelSubDomain": "ip40filmbot"
+  "access_token": "EABuApeDpx84BADuevdT8Of8w1DDTK0hOFa6GZBVGED6ALZCy5A3wd3BUTbjduVOvkuADty4d7kEXYXMY4JeFlcxW0jZB9vimZCIp9vxNzZBmmyWQ5NoKAatOdIISVmAHMxf0Cxo94KMh6MqUZBogy4TiSQesZCqAhomJE60NEbafljB9BH1phoG6lLufWrh6CF200UpR73r2wZDZD",
+  "app_secret": "2b9dbc5cd584e27358f39a002f11f56c",
+  "verify_token": "filmBotVerify"
+
 }

@@ -6,14 +6,15 @@ const fetch = require('node-fetch');
 
 
 var apiKey = '70c0a852f91b5843fd045f3787c9a5f3';
-var movieRecommendation = 'https://api.themoviedb.org/3/discover/movie?api_key=' + apiKey + '&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=';
+var movieRecommendation = 'https://api.themoviedb.org/3/discover/movie?api_key=' 
++ apiKey + '&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=';
 
 const bot = new BootBot({
-  accessToken: config.get('accessToken'),
-  verifyToken: config.get('verifyToken'),
-  appSecret: config.get('appSecret')
+  accessToken: config.get('access_token'),
+  verifyToken: config.get('verify_token'),
+  appSecret: config.get('app_secret')
 });
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 let genreID;
 let length;
 let actor;
