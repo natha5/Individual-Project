@@ -2,8 +2,8 @@
 
 
 describe('first test', () => {
-	const prelimTests = {
-	it('visits fb page ', () => {
+	
+	it('visits fb page', () => {
 		cy.visit('https://www.facebook.com/Testing_bots-108787575008296')
 		cy.get('button').contains('Only Allow Essential Cookies').click()
 		cy.reload()
@@ -12,8 +12,8 @@ describe('first test', () => {
 	})
 
 	it('logs in with facebook account', () => {
-		//const email
-		//const password
+		//const email = ns539@canterbury.ac.uk
+		//const password = pr0jectT3st
 		
 		
 		cy.get('button').contains('Log In').click
@@ -22,10 +22,10 @@ describe('first test', () => {
 		//cy.get('input[pass=').type(password)
 
 	}) }
-}) 
+) 
 
 
-describe('random tests' () => {
+describe('random tests', () => {
 	it('tests fully random run', () => {
 		cy.contains('Aa'.click().type('hello').type({enter})
 		cy.contains('Movie data is taken from https://www.themoviedb.org/').should('exist')
@@ -36,7 +36,7 @@ describe('random tests' () => {
 	}
 		
 		
-	it('specific genre random film' () => {
+	it('specific genre random film', () => {
 		cy.contains('Aa'.click().type('hello').type({enter})
 		
 		cy.contains('Movie data is taken from https://www.themoviedb.org/').should('exist')
@@ -50,7 +50,7 @@ describe('random tests' () => {
 		cy.contains('Title: ').should('exist')
 	}
 		
-	it('specific genre and length random film' () => {
+	it('specific genre and length random film', () => {
 		cy.contains('Aa'.click().type('hello').type({enter})
 		
 		cy.contains('Movie data is taken from https://www.themoviedb.org/').should('exist')
