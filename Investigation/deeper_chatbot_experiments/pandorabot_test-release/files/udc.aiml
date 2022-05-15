@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  
+  <!--Echo-->
+
+  <category>
+	<pattern>*</pattern>
+	<template>echo </star>.</template>
+  </category>
+  
+  <!--Simple regular expression-->
+
+  <category>
+      <pattern>hi</pattern>
+      <template>Hello there</template>
+  </category>
+</aiml>
